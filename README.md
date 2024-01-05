@@ -1,7 +1,10 @@
-# Getting Started with Create React App
+# POTAP React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 The goal of the project is just to study the react.js
+
+[DEPLOYED APP ->>>](https://react.a-potap.ru/)
 
 ## Available Scripts
 
