@@ -13,21 +13,29 @@ const PhotoAlbum = () => {
 
   const GET_ALBUM = gql`
     query GetPosts($id: ID!) {
-      photos(id: $id){
+      photo(id: $id){
         id
         name
         name_en
+        description
+        description_en
+        date_create
+        cover
+        files {
+          file
+          path
+        }
       }
     }
   `;
 
   const { loading, error, data } = useQuery(GET_ALBUM, { variables: {id : albumId}});
-  const photosList = data?.photos || [];
+  const photoAlbum = data?.photo || [];
 
   return (
     <>
       <h1>Photos</h1>
-      <Album loading={loading} error={error} dataList={photosList}/>
+      <Album loading={loading} error={error} album={photoAlbum}/>
     </>
   );
 };

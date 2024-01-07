@@ -5,6 +5,6 @@ loadDevMessages();
 loadErrorMessages();
 
 export const client = new ApolloClient({
-  uri: 'https://a-potap.ru/graphql',
+  uri: 'http://a-potap.local/graphql',
   cache: new InMemoryCache(),
 });
