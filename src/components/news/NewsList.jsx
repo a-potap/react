@@ -12,7 +12,7 @@ const NewsList = ({ loading, error, dataList}) => {
         { dataList.map(({ id, text, date}) => (
             <div key={id}>
               <i>{date}</i>
-              <p>{text}</p>
+              <p dangerouslySetInnerHTML={{ __html: text }}></p>
             </div>
           ))}
 

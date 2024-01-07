@@ -6,10 +6,7 @@ const Post = ({postData}) => {
   return (
     <>
       <h2>{postData?.title}</h2>
-      <p>
-        {postData?.text}
-      </p>
-
+      <div dangerouslySetInnerHTML={{ __html: postData?.text }}></div>
 
       <Comments dataList={comments}></Comments>
 
